@@ -19,8 +19,8 @@ M2=/opt/maven/bin
 - Create EC2 instance and add sc 8080
 - install java 11 and tomcat
 - Edit 2 file /opt/tomcat/webapps/host-manager/META-INF/context.xml and /opt/tomcat/webapps/manager/META-INF/context.xml
-- add user 
-"
+- add user in conf/tomcat-users.xml
+```
  <role rolename="manager-gui"/>
  <role rolename="manager-script"/>
  <role rolename="manager-jmx"/>
@@ -28,4 +28,10 @@ M2=/opt/maven/bin
  <user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status"/>
  <user username="deployer" password="deployer" roles="manager-script"/>
  <user username="tomcat" password="s3cret" roles="manager-gui"/>
-"
+```
+## Part 4 : Build Maven project in Jenkin
+- Create new Credentials
+- install deploy on containers
+- Automate build and deploy using poll SCM and verify CICD
+
+![Done](<Screenshot 2024-03-07 012921-1.png>)
